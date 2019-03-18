@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.act.modules.sys.dao.SysMenuDao">
+
+    <sql id="Base_Column_List" >
+    id as "id",
+    parent_id as "parent.id",
+    parent_ids as "parentIds",
+    name as "name",
+    sort as "sort",
+    href as "href",
+    is_show as "isShow",
+    permission as "permission"
+    </sql>
+
+    <select id="findlist" resultType="sysMenu">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        act_sys_menu
+        <where>
+            <if test="id!=null and id!=''">
+                id=#{id}
+            </if>
+        </where>
+    </select>
+
+</mapper>

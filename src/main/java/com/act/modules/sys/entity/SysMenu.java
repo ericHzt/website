@@ -13,7 +13,7 @@ public class SysMenu extends DataEntity<SysMenu> {
     private String parentIds; // 所有父级编号
     private String name; 	// 名称
     private String href; 	// 链接
-    private String target; 	// 目标（ mainFrame、_blank、_self、_parent、_top）
+    /*private String target; 	// 目标（ mainFrame、_blank、_self、_parent、_top）*/
     private String icon; 	// 图标
     private Integer sort; 	// 排序
     private String isShow; 	// 是否在菜单中显示（1：显示；0：不显示）
@@ -51,13 +51,13 @@ public class SysMenu extends DataEntity<SysMenu> {
         this.href = href;
     }
 
-    public String getTarget() {
+    /*public String getTarget() {
         return target;
     }
 
     public void setTarget(String target) {
         this.target = target;
-    }
+    }*/
 
     public String getIcon() {
         return icon;

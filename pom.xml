@@ -67,6 +67,11 @@
 		</dependency>
 		<!--工具类-->
 		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.7</version>
@@ -82,11 +87,16 @@
 			<version>10.2.0.4</version>
 		</dependency>-->
 
-		<dependency>
+		<!--<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.35</version>
 			<scope>runtime</scope>
+		</dependency>-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.11</version>
 		</dependency>
 		<!-- alibaba的druid数据库连接池 -->
 		<dependency>
