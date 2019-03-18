@@ -1396,3 +1396,756 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2019-03-17 15:25:42.821 DEBUG 4204 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
 2019-03-17 15:25:42.856 DEBUG 4204 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
 >>>>>>> d5a0237c9b743bf9f2ea08076609bdb5c5723861
+2019-03-18 11:15:00.755  INFO 12528 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 12528 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 11:15:00.778 DEBUG 12528 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 11:15:00.778  INFO 12528 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 11:15:05.330 ERROR 12528 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:15:06.145 ERROR 12528 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:15:06.202  INFO 12528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 11:15:06.203  INFO 12528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 11:15:06.224 ERROR 12528 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:15:06.811  INFO 12528 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 11:15:06.841  INFO 12528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 11:15:06.842  INFO 12528 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5706 ms
+2019-03-18 11:15:07.173  INFO 12528 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 11:15:07.563  INFO 12528 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 11:15:08.922  WARN 12528 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 11:15:09.580  INFO 12528 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 11.363 seconds (JVM running for 16.441)
+2019-03-18 11:16:38.099  INFO 12528 --- [http-nio-8088-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 11:16:38.100  INFO 12528 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 11:16:38.110  INFO 12528 --- [http-nio-8088-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-03-18 11:16:38.900 DEBUG 12528 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:16:38.965 DEBUG 12528 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:16:39.029 DEBUG 12528 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:16:39.036 DEBUG 12528 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:16:39.038 DEBUG 12528 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:16:39.052 DEBUG 12528 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:16:39.157 ERROR 12528 --- [http-nio-8088-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.act.modules.sys.service.SysMenuService.findlist(SysMenuService.java:38) ~[classes/:na]
+	at com.act.modules.sys.service.SysMenuService$$FastClassBySpringCGLIB$$db3d46b3.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at com.act.modules.sys.service.SysMenuService$$EnhancerBySpringCGLIB$$bcb380e4.findlist(<generated>) ~[classes/:na]
+	at com.act.modules.sys.controller.SysMenuController.findList(SysMenuController.java:22) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_171]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) ~[druid-1.1.9.jar:1.1.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+
+2019-03-18 11:21:05.815  INFO 3720 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 3720 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 11:21:05.823 DEBUG 3720 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 11:21:05.823  INFO 3720 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 11:21:07.716 ERROR 3720 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:21:07.882 ERROR 3720 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:21:07.891  INFO 3720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 11:21:07.892  INFO 3720 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 11:21:07.900 ERROR 3720 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:21:08.154  INFO 3720 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 11:21:08.159  INFO 3720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 11:21:08.159  INFO 3720 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2203 ms
+2019-03-18 11:21:08.283  INFO 3720 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 11:21:08.428  INFO 3720 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 11:21:09.078  WARN 3720 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 11:21:09.317  INFO 3720 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.32 seconds (JVM running for 5.646)
+2019-03-18 11:21:55.511  INFO 3720 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 11:21:55.511  INFO 3720 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 11:21:55.521  INFO 3720 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-03-18 11:21:55.872 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:21:55.898 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:21:55.939 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:21:55.943 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:21:55.945 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:21:55.956 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:21:55.957 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:21:55.958 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:21:55.972 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:24:06.779 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:24:06.779 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:24:06.788 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:24:06.790 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:24:06.790 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:24:06.802 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:24:06.803 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:24:06.804 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:24:06.816 DEBUG 3720 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:24:22.659 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:24:22.659 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:24:22.668 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:24:22.669 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:24:22.670 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:24:22.682 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:24:22.683 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:24:22.683 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:24:22.693 DEBUG 3720 --- [http-nio-8088-exec-9] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:27:30.470 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:27:30.471 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:27:30.479 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:27:30.481 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:27:30.481 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:27:30.491 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:27:30.492 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:27:30.493 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:27:30.504 DEBUG 3720 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:29:22.855  INFO 2192 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 2192 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 11:29:22.861 DEBUG 2192 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 11:29:22.862  INFO 2192 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 11:29:25.326 ERROR 2192 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:29:25.495 ERROR 2192 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:29:25.503  INFO 2192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 11:29:25.504  INFO 2192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 11:29:25.511 ERROR 2192 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:29:25.785  INFO 2192 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 11:29:25.791  INFO 2192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 11:29:25.792  INFO 2192 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2833 ms
+2019-03-18 11:29:25.942  INFO 2192 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 11:29:26.090  INFO 2192 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 11:29:26.739  WARN 2192 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 11:29:26.990  INFO 2192 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 5.057 seconds (JVM running for 6.416)
+2019-03-18 11:29:45.467  INFO 2192 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 11:29:45.467  INFO 2192 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 11:29:45.480  INFO 2192 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-03-18 11:29:45.907 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:29:45.954 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:29:45.992 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:29:45.997 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:29:45.999 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:29:46.012 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:29:46.014 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:29:46.015 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:29:46.033 DEBUG 2192 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:31:28.472  INFO 3396 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 3396 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 11:31:28.477 DEBUG 3396 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 11:31:28.477  INFO 3396 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 11:31:31.419 ERROR 3396 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:31:31.708 ERROR 3396 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:31:31.718  INFO 3396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 11:31:31.719  INFO 3396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 11:31:31.729 ERROR 3396 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:31:32.150  INFO 3396 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 11:31:32.156  INFO 3396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 11:31:32.156  INFO 3396 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3591 ms
+2019-03-18 11:31:32.310  INFO 3396 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 11:31:32.450  INFO 3396 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 11:31:33.172  WARN 3396 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 11:31:33.466  INFO 3396 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 6.054 seconds (JVM running for 7.445)
+2019-03-18 11:31:34.404  INFO 3396 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 11:31:34.405  INFO 3396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 11:31:34.416  INFO 3396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-03-18 11:31:34.791 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:31:34.818 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:31:34.870 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:31:34.876 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:31:34.877 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:31:34.891 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:31:34.893 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:31:34.893 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:31:34.908 DEBUG 3396 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:31:42.999 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:31:43.000 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:31:43.010 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:31:43.012 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:31:43.012 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:31:43.026 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:31:43.027 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:31:43.028 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:31:43.042 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:34:12.070 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:34:12.071 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:34:12.081 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:34:12.083 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:34:12.083 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:34:12.095 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:34:12.096 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:34:12.097 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:34:12.110 DEBUG 3396 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:38:27.564 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:38:27.565 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:38:27.575 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:38:27.577 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:38:27.577 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:38:27.590 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:38:27.592 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:38:27.593 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:38:27.605 DEBUG 3396 --- [http-nio-8088-exec-4] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:38:34.328 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:38:34.328 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:38:34.339 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:38:34.340 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:38:34.341 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:38:34.353 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:38:34.354 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:38:34.354 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:38:34.366 DEBUG 3396 --- [http-nio-8088-exec-5] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:40:31.940  INFO 13048 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 13048 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 11:40:31.944 DEBUG 13048 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 11:40:31.945  INFO 13048 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 11:40:34.748 ERROR 13048 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:40:34.948 ERROR 13048 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:40:34.960  INFO 13048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 11:40:34.960  INFO 13048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 11:40:34.972 ERROR 13048 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:40:35.285  INFO 13048 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 11:40:35.290  INFO 13048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 11:40:35.290  INFO 13048 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3177 ms
+2019-03-18 11:40:35.405  INFO 13048 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 11:40:35.544  INFO 13048 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 11:40:36.188  WARN 13048 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 11:40:36.430  INFO 13048 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 5.549 seconds (JVM running for 6.965)
+2019-03-18 11:40:36.569  INFO 13048 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 11:40:36.570  INFO 13048 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 11:40:36.579  INFO 13048 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-03-18 11:40:45.733 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:40:45.759 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:40:45.796 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:40:45.801 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:40:45.803 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:40:45.815 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:40:45.817 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:40:45.817 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:40:45.832 DEBUG 13048 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:43:21.737 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:43:21.738 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:43:21.746 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:43:21.748 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:43:21.748 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:43:21.760 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:43:21.761 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:43:21.762 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:43:21.773 DEBUG 13048 --- [http-nio-8088-exec-7] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:43:29.264  INFO 2620 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 2620 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 11:43:29.268 DEBUG 2620 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 11:43:29.268  INFO 2620 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 11:43:31.291 ERROR 2620 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:43:31.474 ERROR 2620 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:43:31.483  INFO 2620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 11:43:31.484  INFO 2620 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 11:43:31.491 ERROR 2620 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:43:31.745  INFO 2620 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 11:43:31.749  INFO 2620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 11:43:31.750  INFO 2620 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2367 ms
+2019-03-18 11:43:31.892  INFO 2620 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 11:43:32.039  INFO 2620 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 11:43:32.636  WARN 2620 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 11:43:32.888  INFO 2620 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.352 seconds (JVM running for 5.694)
+2019-03-18 11:43:37.702  INFO 2620 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 11:43:37.703  INFO 2620 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 11:43:37.711  INFO 2620 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-03-18 11:43:38.083 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:43:38.112 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:43:38.163 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:43:38.168 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:43:38.169 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:43:38.181 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:43:38.183 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:43:38.183 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:43:38.198 DEBUG 2620 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:45:16.959 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:45:16.960 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:45:16.969 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:45:16.970 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:45:16.971 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:45:16.982 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:45:16.982 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:45:16.983 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:45:16.995 DEBUG 2620 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:49:46.572  INFO 6372 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 6372 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 11:49:46.577 DEBUG 6372 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 11:49:46.577  INFO 6372 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 11:49:48.780 ERROR 6372 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:49:48.948 ERROR 6372 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:49:48.957  INFO 6372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 11:49:48.957  INFO 6372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 11:49:48.965 ERROR 6372 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:49:49.216  INFO 6372 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 11:49:49.220  INFO 6372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 11:49:49.220  INFO 6372 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2562 ms
+2019-03-18 11:49:49.340  INFO 6372 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 11:49:49.492  INFO 6372 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 11:49:50.138  WARN 6372 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 11:49:50.397  INFO 6372 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.683 seconds (JVM running for 7.062)
+2019-03-18 11:49:59.831  INFO 6372 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 11:49:59.832  INFO 6372 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 11:49:59.841  INFO 6372 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-03-18 11:50:00.201 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:50:00.232 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:50:00.270 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:50:00.274 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:50:00.276 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:50:00.287 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:50:00.288 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:50:00.289 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:50:00.302 DEBUG 6372 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:59:08.650 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:59:08.651 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:59:08.659 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:59:08.661 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:59:08.661 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:59:08.671 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:59:08.672 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:59:08.672 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:59:08.682 DEBUG 6372 --- [http-nio-8088-exec-10] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 11:59:15.758  INFO 6128 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 6128 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 11:59:15.762 DEBUG 6128 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 11:59:15.762  INFO 6128 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 11:59:18.421 ERROR 6128 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:59:18.590 ERROR 6128 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:59:18.598  INFO 6128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 11:59:18.598  INFO 6128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 11:59:18.607 ERROR 6128 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 11:59:18.888  INFO 6128 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 11:59:18.893  INFO 6128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 11:59:18.893  INFO 6128 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3058 ms
+2019-03-18 11:59:19.009  INFO 6128 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 11:59:19.144  INFO 6128 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 11:59:19.936  WARN 6128 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 11:59:20.217  INFO 6128 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 5.268 seconds (JVM running for 6.709)
+2019-03-18 11:59:23.141  INFO 6128 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 11:59:23.141  INFO 6128 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 11:59:23.154  INFO 6128 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-03-18 11:59:23.551 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 11:59:23.583 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 11:59:23.622 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 11:59:23.626 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 11:59:23.627 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 5(Integer)
+2019-03-18 11:59:23.640 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 5
+2019-03-18 11:59:23.641 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 11:59:23.642 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 11:59:23.657 DEBUG 6128 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 14:24:49.758  INFO 4808 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 4808 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 14:24:49.764 DEBUG 4808 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 14:24:49.764  INFO 4808 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 14:24:51.902 ERROR 4808 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 14:24:52.103 ERROR 4808 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 14:24:52.116  INFO 4808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 14:24:52.116  INFO 4808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 14:24:52.124 ERROR 4808 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 14:24:52.438  INFO 4808 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 14:24:52.446  INFO 4808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 14:24:52.447  INFO 4808 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2607 ms
+2019-03-18 14:24:52.617  INFO 4808 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 14:24:52.792  INFO 4808 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 14:24:53.648  WARN 4808 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 14:24:53.878  INFO 4808 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.987 seconds (JVM running for 6.39)
+2019-03-18 14:25:00.299  INFO 4808 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 14:25:00.299  INFO 4808 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 14:25:00.310  INFO 4808 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-03-18 14:25:00.689 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 14:25:00.721 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 14:25:00.759 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 14:25:00.765 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 14:25:00.767 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 14:25:00.779 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 14:25:00.780 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 14:25:00.781 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 14:25:00.794 DEBUG 4808 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 14:40:48.029  INFO 7684 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 7684 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 14:40:48.034 DEBUG 7684 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 14:40:48.035  INFO 7684 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 14:40:49.975 ERROR 7684 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 14:40:50.128 ERROR 7684 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 14:40:50.137  INFO 7684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 14:40:50.137  INFO 7684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 14:40:50.145 ERROR 7684 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 14:40:50.413  INFO 7684 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 14:40:50.419  INFO 7684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 14:40:50.419  INFO 7684 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2300 ms
+2019-03-18 14:40:50.568  INFO 7684 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 14:40:50.754  INFO 7684 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 14:40:51.453  WARN 7684 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 14:40:51.877  INFO 7684 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.641 seconds (JVM running for 6.079)
+2019-03-18 14:40:54.975  INFO 7684 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 14:40:54.975  INFO 7684 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 14:40:54.985  INFO 7684 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-03-18 14:40:55.366 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 14:40:55.394 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 14:40:55.432 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 14:40:55.436 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 14:40:55.438 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 14:40:55.450 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 14:40:55.451 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 14:40:55.452 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 14:40:55.465 DEBUG 7684 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 15:32:48.610  INFO 9436 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 9436 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 15:32:48.614 DEBUG 9436 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 15:32:48.614  INFO 9436 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 15:32:50.593 ERROR 9436 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:32:50.752 ERROR 9436 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:32:50.761  INFO 9436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 15:32:50.761  INFO 9436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 15:32:50.770 ERROR 9436 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:32:51.039  INFO 9436 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 15:32:51.043  INFO 9436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 15:32:51.043  INFO 9436 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2354 ms
+2019-03-18 15:32:51.162  INFO 9436 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 15:32:51.290  INFO 9436 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 15:32:51.892  WARN 9436 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 15:32:52.153  INFO 9436 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.284 seconds (JVM running for 5.686)
+2019-03-18 15:32:55.162  INFO 9436 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 15:32:55.162  INFO 9436 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 15:32:55.170  INFO 9436 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-03-18 15:32:55.538 DEBUG 9436 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 15:32:55.567 DEBUG 9436 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 15:32:55.604 DEBUG 9436 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 15:32:55.609 DEBUG 9436 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 15:32:55.610 DEBUG 9436 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 15:32:55.621 DEBUG 9436 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 15:33:53.262  INFO 1164 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 1164 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 15:33:53.273 DEBUG 1164 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 15:33:53.273  INFO 1164 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 15:33:55.734 ERROR 1164 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:33:55.898 ERROR 1164 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:33:55.919  INFO 1164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 15:33:55.919  INFO 1164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 15:33:55.926 ERROR 1164 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:33:56.177  INFO 1164 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 15:33:56.181  INFO 1164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 15:33:56.182  INFO 1164 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2755 ms
+2019-03-18 15:33:56.296  INFO 1164 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 15:33:56.444  INFO 1164 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 15:33:57.050  WARN 1164 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 15:33:57.297  INFO 1164 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.731 seconds (JVM running for 6.035)
+2019-03-18 15:34:01.495  INFO 1164 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 15:34:01.496  INFO 1164 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 15:34:01.507  INFO 1164 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-03-18 15:34:01.888 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 15:34:01.916 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 15:34:01.955 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 15:34:01.959 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 15:34:01.961 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 15:34:01.972 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 15:34:01.973 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 15:34:01.974 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 15:34:01.987 DEBUG 1164 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 15:34:20.992 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 15:34:20.993 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 15:34:21.004 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 15:34:21.014 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 15:34:21.017 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 15:34:21.072 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 15:34:25.895 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 15:34:25.896 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 15:34:25.909 DEBUG 1164 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 15:34:59.677  INFO 4856 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 4856 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 15:34:59.681 DEBUG 4856 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 15:34:59.682  INFO 4856 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 15:35:01.558 ERROR 4856 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:35:01.744 ERROR 4856 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:35:01.754  INFO 4856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 15:35:01.754  INFO 4856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 15:35:01.762 ERROR 4856 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:35:02.047  INFO 4856 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 15:35:02.051  INFO 4856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 15:35:02.051  INFO 4856 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2290 ms
+2019-03-18 15:35:02.171  INFO 4856 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 15:35:02.357  INFO 4856 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 15:35:02.961  WARN 4856 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 15:35:03.194  INFO 4856 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.298 seconds (JVM running for 5.634)
+2019-03-18 15:35:04.912  INFO 4856 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 15:35:04.912  INFO 4856 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 15:35:04.920  INFO 4856 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-03-18 15:35:08.944 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 15:35:09.210 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 15:35:09.438 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 15:35:09.456 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 15:35:09.462 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 15:35:09.483 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 15:35:12.839 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 15:35:12.839 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 15:35:12.854 DEBUG 4856 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 15:36:08.737  INFO 8268 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 8268 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 15:36:08.741 DEBUG 8268 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 15:36:08.741  INFO 8268 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 15:36:10.833 ERROR 8268 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:36:11.003 ERROR 8268 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:36:11.014  INFO 8268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 15:36:11.014  INFO 8268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 15:36:11.021 ERROR 8268 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:36:11.290  INFO 8268 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 15:36:11.295  INFO 8268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 15:36:11.295  INFO 8268 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2482 ms
+2019-03-18 15:36:11.412  INFO 8268 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 15:36:11.544  INFO 8268 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 15:36:12.151  WARN 8268 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 15:36:12.509  INFO 8268 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.521 seconds (JVM running for 6.089)
+2019-03-18 15:36:14.858  INFO 8268 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 15:36:14.858  INFO 8268 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 15:36:14.867  INFO 8268 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-03-18 15:36:16.812 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 15:36:17.080 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 15:36:17.308 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 15:36:17.328 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 15:36:17.333 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 2(Integer)
+2019-03-18 15:36:17.351 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 2
+2019-03-18 15:36:22.568 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 15:36:22.569 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 15:36:22.584 DEBUG 8268 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 15:37:10.344  INFO 2360 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 2360 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 15:37:10.349 DEBUG 2360 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 15:37:10.349  INFO 2360 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 15:37:13.146 ERROR 2360 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:37:13.365 ERROR 2360 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:37:13.376  INFO 2360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 15:37:13.376  INFO 2360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 15:37:13.384 ERROR 2360 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 15:37:13.695  INFO 2360 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 15:37:13.699  INFO 2360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 15:37:13.699  INFO 2360 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3217 ms
+2019-03-18 15:37:13.826  INFO 2360 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 15:37:13.987  INFO 2360 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 15:37:14.746  WARN 2360 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 15:37:14.990  INFO 2360 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 5.825 seconds (JVM running for 7.193)
+2019-03-18 15:37:17.814  INFO 2360 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 15:37:17.815  INFO 2360 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 15:37:17.827  INFO 2360 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-03-18 15:37:20.469 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 15:37:20.737 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 15:37:20.964 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 15:37:20.982 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 15:37:20.987 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 15:37:21.008 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 15:37:25.316 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 15:37:25.318 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 15:37:25.333 DEBUG 2360 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 16:10:33.389  INFO 8740 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 8740 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 16:10:33.404 DEBUG 8740 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 16:10:33.405  INFO 8740 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 16:10:35.252 ERROR 8740 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 16:10:35.416 ERROR 8740 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 16:10:35.426  INFO 8740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 16:10:35.427  INFO 8740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 16:10:35.435 ERROR 8740 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 16:10:35.718  INFO 8740 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 16:10:35.722  INFO 8740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 16:10:35.722  INFO 8740 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2246 ms
+2019-03-18 16:10:35.848  INFO 8740 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 16:10:36.077  INFO 8740 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 16:10:36.818  WARN 8740 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 16:10:37.078  INFO 8740 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.466 seconds (JVM running for 6.0)
+2019-03-18 16:10:39.120  INFO 8740 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 16:10:39.121  INFO 8740 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 16:10:39.133  INFO 8740 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-03-18 16:10:41.365 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 16:10:41.394 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 16:10:41.432 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 16:10:41.437 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 16:10:41.439 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 16:10:41.449 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 16:10:41.451 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 16:10:41.452 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 16:10:41.465 DEBUG 8740 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 16:11:32.248  INFO 7836 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 7836 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 16:11:32.252 DEBUG 7836 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 16:11:32.253  INFO 7836 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 16:11:34.062 ERROR 7836 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 16:11:34.219 ERROR 7836 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 16:11:34.228  INFO 7836 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 16:11:34.228  INFO 7836 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 16:11:34.237 ERROR 7836 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 16:11:34.503  INFO 7836 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 16:11:34.507  INFO 7836 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 16:11:34.507  INFO 7836 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2170 ms
+2019-03-18 16:11:34.623  INFO 7836 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 16:11:34.762  INFO 7836 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 16:11:35.400  WARN 7836 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 16:11:35.644  INFO 7836 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.186 seconds (JVM running for 5.617)
+2019-03-18 16:11:47.843  INFO 7836 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 16:11:47.844  INFO 7836 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 16:11:47.853  INFO 7836 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-03-18 16:11:49.840 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 16:11:49.888 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 16:11:49.926 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 16:11:49.931 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 16:11:49.933 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 3(Integer)
+2019-03-18 16:11:49.946 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 3
+2019-03-18 16:11:49.949 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 16:11:49.949 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 16:11:49.963 DEBUG 7836 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 17:03:24.103  INFO 3984 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 3984 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 17:03:24.108 DEBUG 3984 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 17:03:24.108  INFO 3984 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 17:03:26.371 ERROR 3984 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:03:26.536 ERROR 3984 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:03:26.545  INFO 3984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 17:03:26.546  INFO 3984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 17:03:26.554 ERROR 3984 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:03:26.827  INFO 3984 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 17:03:26.830  INFO 3984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 17:03:26.831  INFO 3984 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2641 ms
+2019-03-18 17:03:26.949  INFO 3984 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 17:03:27.093  INFO 3984 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 17:03:27.832  WARN 3984 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 17:03:28.101  INFO 3984 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.901 seconds (JVM running for 6.486)
+2019-03-18 17:03:28.154  INFO 3984 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 17:03:28.155  INFO 3984 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 17:03:28.164  INFO 3984 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-03-18 17:03:30.756 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 17:03:30.786 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 17:03:30.827 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 17:03:30.832 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 17:03:30.834 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 8(Integer)
+2019-03-18 17:03:30.847 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 8
+2019-03-18 17:03:30.848 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu 
+2019-03-18 17:03:30.849 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 
+2019-03-18 17:03:30.864 DEBUG 3984 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 11
+2019-03-18 17:12:51.676  INFO 8032 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 8032 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 17:12:51.680 DEBUG 8032 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 17:12:51.681  INFO 8032 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 17:12:53.738 ERROR 8032 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:12:53.889 ERROR 8032 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:12:53.913  INFO 8032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 17:12:53.914  INFO 8032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 17:12:53.922 ERROR 8032 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:12:54.161  INFO 8032 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 17:12:54.166  INFO 8032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 17:12:54.166  INFO 8032 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2376 ms
+2019-03-18 17:12:54.283  INFO 8032 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 17:12:54.425  INFO 8032 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 17:12:55.048  WARN 8032 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 17:12:55.282  INFO 8032 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.511 seconds (JVM running for 6.079)
+2019-03-18 17:13:01.114  INFO 8032 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 17:13:01.114  INFO 8032 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 17:13:01.123  INFO 8032 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-03-18 17:13:03.230 DEBUG 8032 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 17:13:03.264 DEBUG 8032 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 17:13:03.302 DEBUG 8032 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 17:13:03.307 DEBUG 8032 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 17:13:03.308 DEBUG 8032 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 8(Integer)
+2019-03-18 17:13:03.323 DEBUG 8032 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 8
+2019-03-18 17:14:08.042  INFO 8152 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 8152 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 17:14:08.046 DEBUG 8152 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 17:14:08.046  INFO 8152 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 17:14:10.316 ERROR 8152 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:14:10.486 ERROR 8152 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:14:10.496  INFO 8152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 17:14:10.497  INFO 8152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 17:14:10.508 ERROR 8152 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:14:10.787  INFO 8152 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 17:14:10.791  INFO 8152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 17:14:10.792  INFO 8152 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2669 ms
+2019-03-18 17:14:10.923  INFO 8152 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 17:14:11.103  INFO 8152 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 17:14:11.737  WARN 8152 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 17:14:11.989  INFO 8152 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.788 seconds (JVM running for 6.232)
+2019-03-18 17:14:16.169  INFO 8152 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 17:14:16.169  INFO 8152 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 17:14:16.177  INFO 8152 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-03-18 17:14:18.080 DEBUG 8152 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 17:14:18.111 DEBUG 8152 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 17:14:18.166 DEBUG 8152 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 17:14:18.171 DEBUG 8152 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 17:14:18.173 DEBUG 8152 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 8(Integer)
+2019-03-18 17:14:18.189 DEBUG 8152 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 8
+2019-03-18 17:14:41.773 DEBUG 8152 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 17:14:41.776 DEBUG 8152 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 17:14:41.788 DEBUG 8152 --- [http-nio-8088-exec-3] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 17:14:41.797 DEBUG 8152 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 17:14:41.799 DEBUG 8152 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 8(Integer)
+2019-03-18 17:14:41.839 DEBUG 8152 --- [http-nio-8088-exec-3] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 8
+2019-03-18 17:15:31.602  INFO 7232 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 7232 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 17:15:31.606 DEBUG 7232 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 17:15:31.606  INFO 7232 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 17:15:33.460 ERROR 7232 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:15:33.610 ERROR 7232 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:15:33.619  INFO 7232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 17:15:33.619  INFO 7232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 17:15:33.627 ERROR 7232 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:15:33.920  INFO 7232 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 17:15:33.924  INFO 7232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 17:15:33.924  INFO 7232 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2250 ms
+2019-03-18 17:15:34.111  INFO 7232 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 17:15:34.300  INFO 7232 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 17:15:34.976  WARN 7232 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 17:15:35.230  INFO 7232 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.562 seconds (JVM running for 6.114)
+2019-03-18 17:15:35.417  INFO 7232 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 17:15:35.417  INFO 7232 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 17:15:35.429  INFO 7232 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-03-18 17:15:37.829 DEBUG 7232 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 17:15:37.861 DEBUG 7232 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 17:15:37.898 DEBUG 7232 --- [http-nio-8088-exec-2] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 17:15:37.902 DEBUG 7232 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 17:15:37.905 DEBUG 7232 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 8(Integer)
+2019-03-18 17:15:37.920 DEBUG 7232 --- [http-nio-8088-exec-2] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 8
+2019-03-18 17:20:41.522  INFO 10360 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 10360 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-18 17:20:41.527 DEBUG 10360 --- [main] com.act.website.WebsiteApplication       : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-03-18 17:20:41.527  INFO 10360 --- [main] com.act.website.WebsiteApplication       : The following profiles are active: dev
+2019-03-18 17:20:43.357 ERROR 10360 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:20:43.511 ERROR 10360 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:20:43.521  INFO 10360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-18 17:20:43.521  INFO 10360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-18 17:20:43.529 ERROR 10360 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-18 17:20:43.795  INFO 10360 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-18 17:20:43.799  INFO 10360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-18 17:20:43.799  INFO 10360 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2194 ms
+2019-03-18 17:20:43.918  INFO 10360 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-18 17:20:44.051  INFO 10360 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-18 17:20:44.657  WARN 10360 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-18 17:20:44.893  INFO 10360 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.145 seconds (JVM running for 5.617)
+2019-03-18 17:20:49.249  INFO 10360 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-18 17:20:49.249  INFO 10360 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-18 17:20:49.255  INFO 10360 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-03-18 17:20:51.454 DEBUG 10360 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==>  Preparing: SELECT count(0) FROM act_sys_menu 
+2019-03-18 17:20:51.487 DEBUG 10360 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : ==> Parameters: 
+2019-03-18 17:20:51.524 DEBUG 10360 --- [http-nio-8088-exec-1] c.a.m.sys.dao.SysMenuDao.findlist_COUNT  : <==      Total: 1
+2019-03-18 17:20:51.528 DEBUG 10360 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==>  Preparing: select id as "id", parent_id as "parent.id", parent_ids as "parentIds", name as "name", sort as "sort", href as "href", is_show as "isShow", permission as "permission" from act_sys_menu LIMIT ? 
+2019-03-18 17:20:51.530 DEBUG 10360 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : ==> Parameters: 2(Integer)
+2019-03-18 17:20:51.542 DEBUG 10360 --- [http-nio-8088-exec-1] c.a.modules.sys.dao.SysMenuDao.findlist  : <==      Total: 2

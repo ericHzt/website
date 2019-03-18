@@ -1,4 +1,5 @@
 ﻿<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +13,9 @@
     <!-- Morris Chart Styles-->
     <link th:href="@{/assets/js/morris/morris-0.4.3.min.css}" rel="stylesheet" />
     <!-- Custom Styles-->
-    <link th:href="@{/static/css/custom-styles.css}" rel="st	ylesheet" />
+    <link th:href="@{/static/css/custom-styles.css}" rel="stylesheet" />
     <!-- Google Fonts-->
-    <!--<link th:href='@{http://fonts.googleapis.com/css?family=Open+Sans}' rel='stylesheet' type='text/css' />-->
+    <link th:href='@{http://fonts.googleapis.com/css?family=Open+Sans}' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" th:href="@{/assets/js/Lightweight-Chart/cssCharts.css}">
 </head>
 
@@ -28,7 +29,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand waves-effect waves-dark" href="@{index.html}"><i class="large material-icons">track_changes</i> <strong>target</strong></a>
+                <a class="navbar-brand waves-effect waves-dark" href="index.html"><i class="large material-icons">track_changes</i> <strong>target</strong></a>
 				
 		<div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
             </div>
@@ -212,7 +213,7 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> 菜单管理</a>
+                        <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="ui-elements.html" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> UI Elements</a>
