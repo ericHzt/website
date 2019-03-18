@@ -1,6 +1,6 @@
 package com.act.modules.sys.service;
 
-import com.act.common.base.Service.CurdService;
+import com.act.common.base.service.*;
 import com.act.modules.sys.dao.SysMenuDao;
 import com.act.modules.sys.entity.SysMenu;
 import com.github.pagehelper.Page;

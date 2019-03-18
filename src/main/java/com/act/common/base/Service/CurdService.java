@@ -1,4 +1,4 @@
-package com.act.common.base.Service;
+package com.act.common.base.service;
 
 import com.act.common.base.dao.CurdDao;
 import com.act.common.base.entity.DataEntity;
