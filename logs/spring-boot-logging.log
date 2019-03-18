@@ -1263,3 +1263,17 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2019-03-15 15:37:58.505  INFO 10660 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-03-15 15:37:58.505  INFO 10660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-03-15 15:37:58.521  INFO 10660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-03-15 15:38:41.218  INFO 5492 --- [main] com.act.website.WebsiteApplication       : Starting WebsiteApplication on LAPTOP-6OU79BR9 with PID 5492 (D:\IDEA_PROJECT\website2\target\classes started by ERIC in D:\IDEA_PROJECT\website2)
+2019-03-15 15:38:41.223  INFO 5492 --- [main] com.act.website.WebsiteApplication       : No active profile set, falling back to default profiles: default
+2019-03-15 15:38:43.365 ERROR 5492 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-15 15:38:43.531 ERROR 5492 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-15 15:38:43.553  INFO 5492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-15 15:38:43.554  INFO 5492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-15 15:38:43.563 ERROR 5492 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2019-03-15 15:38:43.825  INFO 5492 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-15 15:38:43.832  INFO 5492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-15 15:38:43.832  INFO 5492 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2514 ms
+2019-03-15 15:38:43.955  INFO 5492 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-03-15 15:38:44.104  INFO 5492 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-15 15:38:44.731  WARN 5492 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-03-15 15:38:44.937  INFO 5492 --- [main] com.act.website.WebsiteApplication       : Started WebsiteApplication in 4.638 seconds (JVM running for 6.257)
